@@ -3,24 +3,25 @@ import { useVideoPlayer } from '@/lib/video';
 import { LogoScene } from './video_scenes/LogoScene';
 
 export const SCENE_DURATIONS = {
-  black: 400,
-  construct: 2800,
-  weave: 600,
+  black:    300,
+  scatter:  500,
+  assemble: 2400,
+  glow:     500,
   solidify: 700,
-  ambient: 2500,
+  ambient:  2600,
 };
 
 const SCENE_START_SEC: Record<string, number> = (() => {
   const out: Record<string, number> = {};
-  let cumulativeMs = 0;
-  for (const [key, ms] of Object.entries(SCENE_DURATIONS)) {
-    out[key] = cumulativeMs / 1000;
-    cumulativeMs += ms;
+  let ms = 0;
+  for (const [key, dur] of Object.entries(SCENE_DURATIONS)) {
+    out[key] = ms / 1000;
+    ms += dur;
   }
   return out;
 })();
 
-const AUDIO_SEEK_EPSILON_SEC = 0.18;
+const AUDIO_SEEK_EPSILON = 0.18;
 
 export default function VideoTemplate({
   durations = SCENE_DURATIONS,
@@ -45,9 +46,9 @@ export default function VideoTemplate({
     const audio = audioRef.current;
     if (!audio) return;
     audio.volume = 0.45;
-    const targetTime = SCENE_START_SEC[baseSceneKey] ?? 0;
-    if (Math.abs(audio.currentTime - targetTime) > AUDIO_SEEK_EPSILON_SEC) {
-      audio.currentTime = targetTime;
+    const target = SCENE_START_SEC[baseSceneKey] ?? 0;
+    if (Math.abs(audio.currentTime - target) > AUDIO_SEEK_EPSILON) {
+      audio.currentTime = target;
     }
     audio.play().catch(() => {});
   }, [currentSceneKey, baseSceneKey, muted]);
