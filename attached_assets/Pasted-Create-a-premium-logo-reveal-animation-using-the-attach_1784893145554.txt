@@ -1,0 +1,31 @@
+Create a premium logo reveal animation using the attached logo as the exact reference. Preserve every angle, proportion, and geometric detail exactly as provided.
+
+The animation should be inspired by the logo's woven lattice structure. Rather than appearing all at once, each diagonal beam should emerge naturally, as if being carefully interlocked into place.
+
+Begin on a pure black background. A single glowing emerald-green line rises from the bottom center. As it reaches each intersection, it splits into multiple paths, intelligently following the logo's geometry. Every new segment grows smoothly from the previous one, giving the impression that the emblem is being hand-woven by light.
+
+Where two beams cross, one should elegantly pass beneath the other before continuing, creating the illusion of an intricate woven structure. Each completed intersection emits a brief, subtle pulse of light before fading back into the normal glow.
+
+The construction should progress from the bottom upward until the full emblem is assembled. The top crown-like section should be the final piece, giving the logo a satisfying completion moment.
+
+Once complete, the entire logo briefly transitions from glowing wireframe into a polished solid emerald-green mark with soft reflections. A gentle light sweep travels diagonally across the logo, highlighting its beveled edges before disappearing.
+
+The finished logo remains centered, perfectly still, with only a subtle ambient glow and a few slow-moving floating particles around it.
+
+The motion should feel intentional, luxurious, and highly engineered, similar to Apple product reveals or premium fintech brand intros. Avoid flashy explosions, spinning, excessive particles, or unnecessary camera movement.
+
+Style: Premium, minimal, geometric, futuristic, elegant.
+
+Animation principles: Smooth ease-in/ease-out, precise motion, seamless transitions, physically believable movement.
+
+Lighting: Soft bloom, subtle volumetric lighting, polished reflections.
+
+Background: Pure black.
+
+Color: Use only the original emerald green from the provided logo with white highlights.
+
+Duration: 4–5 seconds.
+
+Output: 1080 × 1920 portrait, 60 FPS, optimized for a mobile splash screen.
+
+Critical requirement: Do not redraw or reinterpret the logo. The animation must construct the exact supplied logo by following its existing geometric paths.
