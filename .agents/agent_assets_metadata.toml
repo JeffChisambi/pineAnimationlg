@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "Edu578DtNo5WXnZPrHIQz"
+uri = "file://artifacts/logo-reveal/public/audio/bg_music.mp3"
+type = "audio"
+title = "logo reveal background music"

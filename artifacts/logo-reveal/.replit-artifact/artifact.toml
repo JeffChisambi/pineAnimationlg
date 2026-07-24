@@ -1,0 +1,27 @@
+kind = "video"
+previewPath = "/"
+title = "Logo Reveal Animation"
+version = "1.0.0"
+id = "artifacts/logo-reveal"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20062
+
+[services.development]
+run = "pnpm --filter @workspace/logo-reveal run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/logo-reveal", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/logo-reveal/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20062"
+BASE_PATH = "/"
